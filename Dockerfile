@@ -9,7 +9,7 @@ RUN bitnami-pkg unpack redis-4.0.9-1 --checksum 9660d6d127da0e49fa7fb9c1858f9b26
 
 COPY rootfs /
 ENV ALLOW_EMPTY_PASSWORD="no" \
-    PATH="/opt/mmakertrade/redis/bin:$PATH" \
+    PATH="/opt/bitnami/redis/bin:$PATH" \
     REDIS_DISABLE_COMMANDS="" \
     REDIS_MASTER_HOST="" \
     REDIS_MASTER_PASSWORD="" \

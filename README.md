@@ -1,8 +1,10 @@
-[![Circle CI](https://circleci.com/gh/mmakertrade/docker-redis.svg?style=shield)](https://circleci.com/gh/mmakertrade/docker-redis) [![Docker Repository on Quay.io](https://quay.io/repository/mmakertrade/redis/status "Docker Repository on Quay.io")](https://quay.io/repository/mmakertrade/redis)
+[![Circle CI](https://circleci.com/gh/mmakertrade/docker-redis.svg?style=shield)](https://circleci.com/gh/mmakertrade/docker-redis)
 
-# docker-redis
+# Redis
 
-# Running in Development
+Ready-to-run Docker image with Redis.
+
+## Running in Development
 
 ```bash
 $ docker run --name redis -e ALLOW_EMPTY_PASSWORD=yes mmakertrade/redis:latest
@@ -22,7 +24,7 @@ services:
       - '6379:6379'
 ```
 
-# Running in Production
+## Running in Production
 
 ```bash
 $ docker run --name redis -e REDIS_PASSWORD=password123 mmakertrade/redis:latest
@@ -42,7 +44,7 @@ services:
       - REDIS_PASSWORD=password123
 ```
 
-# Building
+## Building
 
 ```bash
 $ ./build.sh 4.0

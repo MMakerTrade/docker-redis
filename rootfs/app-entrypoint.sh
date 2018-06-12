@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-. /opt/mmakertrade/base/functions
-. /opt/mmakertrade/base/helpers
+. /opt/bitnami/base/functions
+. /opt/bitnami/base/helpers
 
 print_welcome_page
 

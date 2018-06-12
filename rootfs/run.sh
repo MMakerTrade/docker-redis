@@ -1,11 +1,11 @@
 #!/bin/bash
-. /opt/mmakertrade/base/functions
-. /opt/mmakertrade/base/helpers
+. /opt/bitnami/base/functions
+. /opt/bitnami/base/helpers
 
 USER=redis
 DAEMON=redis-server
 EXEC=$(which $DAEMON)
-ARGS="/opt/mmakertrade/redis/conf/redis.conf --daemonize no"
+ARGS="/opt/bitnami/redis/conf/redis.conf --daemonize no"
 
 # configure extra command line flags
 if [[ -n "$REDIS_EXTRA_FLAGS" ]]; then
@@ -13,7 +13,7 @@ if [[ -n "$REDIS_EXTRA_FLAGS" ]]; then
 fi
 
 # log output to stdout
-sed -i 's/^logfile /# logfile /g' /opt/mmakertrade/redis/conf/redis.conf
+sed -i 's/^logfile /# logfile /g' /opt/bitnami/redis/conf/redis.conf
 
 # If container is started as `root` user
 if [ $EUID -eq 0 ]; then
