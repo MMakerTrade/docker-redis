@@ -1,14 +1,6 @@
 #!/bin/sh
 set -e
 
-create_socket_dir() {
-  mkdir -p /run/redis
-  chmod -R 0755 /run/redis
-  chown -R ${REDIS_USER}:${REDIS_USER} /run/redis
-}
-
-create_socket_dir
-
 # first arg is `-f` or `--some-option`
 # or first arg is `something.conf`
 if [ "${1#-}" != "$1" ] || [ "${1%.conf}" != "$1" ]; then
